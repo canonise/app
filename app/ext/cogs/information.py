@@ -7,7 +7,6 @@ from ext.tree import App
 from ext.interaction import Interaction
 
 from discord import Message, Embed, Interaction as Default, User
-from typing import Union, Optional
 
 
 bot = App()
@@ -25,6 +24,10 @@ class Information(Cog):
             "usage": "<member>",
             "example": "route"
         }
+    )
+    @allowed_installs(
+        guilds=True, 
+        users=True
     )
     @allowed_contexts(
         guilds=True, 
